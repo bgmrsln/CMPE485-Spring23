@@ -1215,3 +1215,15 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 299.671550 seconds.
+  path: Assets/Materials/middle.physicMaterial
+  artifactKey: Guid(8aa28971561c840a68535e726d29cfae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/middle.physicMaterial using Guid(8aa28971561c840a68535e726d29cfae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a19862860ec6e773e7a77f5010051aed') in 0.090220 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Materials/Most friction.physicMaterial
+  artifactKey: Guid(d17c1e2ac2af14588b485da60ba921cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Most friction.physicMaterial using Guid(d17c1e2ac2af14588b485da60ba921cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a829aff258b84c735e210db3f0a4db') in 0.002436 seconds 
