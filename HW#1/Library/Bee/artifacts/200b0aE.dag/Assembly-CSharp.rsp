@@ -345,6 +345,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CubeMove.cs"
+"Assets/Scripts/NewCube.cs"
 -langversion:9.0
 
 /deterministic
