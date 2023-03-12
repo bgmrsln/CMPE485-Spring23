@@ -348,6 +348,7 @@
 "Assets/Scripts/CubeMove.cs"
 "Assets/Scripts/CubeMoveInput.cs"
 "Assets/Scripts/NewCube.cs"
+"Assets/Scripts/Restart.cs"
 -langversion:9.0
 
 /deterministic

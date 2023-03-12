@@ -5,9 +5,9 @@ using UnityEngine;
 public class CubeMoveInput : MonoBehaviour
 {
     [SerializeField]
-  
-    private Vector3 startPos;
     
+    private Vector3 startPos;
+    [SerializeField] private float intensity= 1f;
 
     private Rigidbody rb;
     // Start is called before the first frame update
@@ -27,12 +27,10 @@ public class CubeMoveInput : MonoBehaviour
 
         if (horizontalInput != 0 || verticalInput != 0)
         {
-            Vector3 force = new Vector3(horizontalInput, 0f, verticalInput);
+            Vector3 force = new Vector3(horizontalInput*intensity, 0f, verticalInput*intensity);
             rb.AddForce(force);
         }
-        if(horizontalInput !=0){
-        	Debug.Log("Horizontal Input: " + horizontalInput);
-        }
+        
 
         
     }

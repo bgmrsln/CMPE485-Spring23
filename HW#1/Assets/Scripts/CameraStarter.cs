@@ -5,16 +5,26 @@ using UnityEngine;
 public class CameraStarter : MonoBehaviour
 {
 	[SerializeField] private GameObject objectToFollow;
-    [SerializeField] private float xOffset = -40f;
+    [SerializeField] private float xOffset = 0f;
     [SerializeField] private float yOffset = 5f;
     [SerializeField] private float zOffset = -40f;
-    private bool isFollowingObject = false;
+    private Quaternion camRot;
+    public bool isFollowingObject = false;
     // Start is called before the first frame update
     void Start()
     {
+    	camRot= Camera.main.transform.rotation;
         
     }
-
+    void Update()
+    {
+    	if (Input.GetKeyDown(KeyCode.R))
+        {
+        
+        	isFollowingObject = false;
+        }
+        
+    }
     // Update is called once per frame
     void LateUpdate()
     {
@@ -30,7 +40,7 @@ public class CameraStarter : MonoBehaviour
                 Camera.main.transform.SetParent(objectToFollow.transform);
                 Camera.main.transform.LookAt(objectToFollow.transform.position);
 
-                
+                //Camera.main.transform.rotation= camRot;
                 isFollowingObject = true;
             }
         }
