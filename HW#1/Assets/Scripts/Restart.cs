@@ -24,9 +24,7 @@ public class Restart : MonoBehaviour
 		{
 			spawnPositions.Add(objectsContainer.GetChild(i).position);
 			spawnRotations.Add(objectsContainer.GetChild(i).rotation);
-			Debug.Log("Childs" + objectsContainer.childCount);
-			Debug.Log("Child " + objectsContainer.GetChild(i));
-			Debug.Log("Rotation" + objectsContainer.GetChild(i).rotation);
+			
 		}
 		camPos= Camera.main.transform.position;
 		camRot= Camera.main.transform.rotation;
