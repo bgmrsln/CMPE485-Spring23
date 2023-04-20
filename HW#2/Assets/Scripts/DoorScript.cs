@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class DoorScript : MonoBehaviour
 {
-	public float rotateSpeed = 90f; // the speed at which the door rotates
-    public GameObject keyObject; // the key object that triggers the door to open
+	public float doorOpenAngle = 90f;
+    public float doorCloseAngle = 0f;
+    public float smooth = 1f;
+    private bool open = false;
+ 
 
-
-    private bool isOpen = false; // a flag to indicate whether the door is currently open
     // Start is called before the first frame update
     void Start()
     {
@@ -22,20 +25,37 @@ public class DoorScript : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        // check if the collision was with the key object
-        if (collision.gameObject == keyObject)
+    	
+
+        if (collision.gameObject.CompareTag("Key"))
         {
-            // if the door is not already open, rotate it open
-            if (!isOpen)
+        	Debug.Log("Collision2");
+            // Rotate the door open
+            if (open == false)
             {
-                transform.Rotate(0, 90, 0);
-                isOpen = true;
+
+            	Debug.Log("transformRotation" + transform.rotation);
+                //Quaternion targetRotation = Quaternion.Euler(doorOpenAngle, doorOpenAngle, doorOpenAngle);
+                //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, smooth * Time.deltaTime);
+                Vector3 movementVector = new Vector3(0,0,3) ;
+                transform.Translate(movementVector, Space.Self);
+                open = true;
+              
+          
             }
-            // if the door is already open, end the game
-            else
-            {
-                Application.Quit();
-            }
+
+            // End the game after a delay
+            Invoke("EndGame", 5f);
         }
+
+       
+	       
+    	
+    
+    }
+    void EndGame()
+    {
+        // Reload the initial scene
+        SceneManager.LoadScene(0);
     }
 }
