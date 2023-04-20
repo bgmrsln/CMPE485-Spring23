@@ -7,7 +7,7 @@ public class CameraStarter : MonoBehaviour
 	[SerializeField] private GameObject objectToFollow;
     [SerializeField] private float xOffset = 0f;
     [SerializeField] private float yOffset = 5f;
-    [SerializeField] private float zOffset = -40f;
+    [SerializeField] private float zOffset = 0f;
     private Quaternion camRot;
     public bool isFollowingObject = false;
     // Start is called before the first frame update
